@@ -1,0 +1,1 @@
+const leerResultado = document.querySelectorAll("#resultado");
