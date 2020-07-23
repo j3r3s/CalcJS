@@ -1,16 +1,22 @@
 const leerResultado = document.querySelector("#resultado");
 
 
+function clear() {
+
+    leerResultado.value = y
+}
+
+
 function set(e) {
 
-    leerResultado.textContent += e
+    leerResultado.value += e
 
 }
 
 function result() {
 
-    resultado = eval(leerResultado.textContent);
+    resultado = eval(leerResultado.value);
 
-    leerResultado.textContent = resultado;
+    leerResultado.value = resultado;
 
 }

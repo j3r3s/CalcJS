@@ -20,9 +20,10 @@
         <p>Calcule sus gastos y su vida como si fuera un humano</p>
         <form action="">
             <section class="formform">
-                <span id="resultado"></span>
+                <input type="text" id="resultado">
                 <div class="botons">
                     <div class="col1">
+                        <input type="button" value="C" onclick="clear()">
                         <div class="row1">
                             <input type="button" value="1" onclick="set(1)">
                             <input type="button" value="2" onclick="set(2)">
@@ -39,12 +40,9 @@
                             <input type="button" value="9" onclick="set(9)">
                         </div>
                         <div class="row4">
-                            <input type="button" value="%" onclick="set()">
+                            <input type="button" value="%" onclick="percent()">
                             <input type="button" value="0" onclick="set(0)">
                             <input type="button" value="π" onclick="set(Math.PI)">
-                        </div>
-                        <div class="row5">
-                            <input type="button" value="=" onclick=" result('=')">
                         </div>
                     </div>
                     <div class="col2">
@@ -52,6 +50,7 @@
                         <input type="button" value="-" onclick="set('-')">
                         <input type="button" value="*" onclick="set('*')">
                         <input type="button" value="/" onclick="set('/')">
+                        <input type="button" value="=" onclick=" result('=')">
                     </div>
                 </div>
             </section>
@@ -60,8 +59,7 @@
     <footer>
         <span class="creator">Made in Home</span>
         <span class="copy">All Rigth Reserved</span>
-        <span class="year">
-            <script></script></span>
+        <span class="year">&copy 2020 papu</span>
     </footer>
 </body>
 
