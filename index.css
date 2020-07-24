@@ -1,3 +1,8 @@
+body {
+    display: grid;
+}
+
+
 .formform {
     width: 150px;
     height: 200px;
@@ -15,8 +20,8 @@
 }
 
 #resultado:focus {
-    background-color:  rgb(140, 140, 231);
-    caret-color: rgb(140, 140, 231);
+    background-color: rgb(206, 206, 240);
+    caret-color: rgb(206, 206, 240);
 }
 
 .botones {
