@@ -34,14 +34,12 @@ function set(e) {
 function result() {
     try {
         resultado = eval(leerResultado.value);
-
         leerResultado.value = resultado;
 
     } catch (error) {
 
         leerResultado.value = "mandaste cualquiera";
-        leerResultado.style.color = 'red';
-        leerResultado.style.fontSize = '0.7em'
+        leerResultado.className = "resultadoerror"
     }
 
 }

@@ -8,20 +8,30 @@ body {
     height: 200px;
 }
 
-#resultado {
+.resultado {
     width: 117px;
     height: 20px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Orbitron', Helvetica, sans-serif;
     font-size: 1.1em;
     border-radius: 0.5em;
     background-color: white;
     caret-color: white;
 }
 
-#resultado:focus {
-    background-color: rgb(206, 206, 240);
-    caret-color: rgb(206, 206, 240);
+.resultado:focus {
+    background-color: #cecef0;
+    caret-color: #cecef0;
+}
+
+.resultadototal{
+    color: #097200;
+}
+
+.resultadoerror {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.7em;
+    color: red;
 }
 
 .botones {
