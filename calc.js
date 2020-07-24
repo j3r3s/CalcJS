@@ -5,7 +5,6 @@ const leerResultado = document.querySelector("#resultado");
 document.addEventListener('keydown', (event) => {
    
     let keyName = event.keyCode;
-    console.log(keyName)
    
     switch (keyName) {
         case 13:
