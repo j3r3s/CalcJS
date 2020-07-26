@@ -16,16 +16,12 @@ body {
     font-size: 1.1em;
     border-radius: 0.5em;
     background-color: white;
-    caret-color: white;
-}
-
-.resultado:focus {
-    background-color: #cecef0;
-    caret-color: #cecef0;
+    caret-color: rgba(255, 255, 255, 0);
 }
 
 .resultadototal{
     color: #097200;
+
 }
 
 .resultadoerror {

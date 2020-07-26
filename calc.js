@@ -17,29 +17,26 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-
 function C() {
 
+    leerResultado.classList.remove("resultadototal", "resultadoerror");
     leerResultado.value = "";
-    leerResultado.style.fontSize = "1.1em";
-    leerResultado.style.color = "black";
 }
 
 function set(e) {
 
     leerResultado.value += e;
-
 }
 
 function result() {
     try {
         resultado = eval(leerResultado.value);
+        leerResultado.classList.add("resultadototal");
         leerResultado.value = resultado;
 
     } catch (error) {
 
+        leerResultado.classList.add("resultadoerror");
         leerResultado.value = "mandaste cualquiera";
-        leerResultado.className = "resultadoerror"
     }
-
 }
