@@ -1,4 +1,15 @@
-body {
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgb(163,185,126);
+    background: radial-gradient(circle, rgba(163,185,126,1) 0%, rgba(231,240,216,1) 48%);
+}
+
+.main-calc {
     height: 100vh;
     display: grid;
     grid-template-rows: 20% 70% 10%;
@@ -11,22 +22,34 @@ header{
     justify-self: center;
     align-self: center;
     text-align: center;
+    
 }
 
 .formform {
+    display: grid;
+    grid-template-rows: 8% 70%;
+    grid-gap: 1%;
+    height: 100%;
+    width: 100%;
     justify-self: center;
     align-self: center;
-    height: 100%;
+    
 }
 
 .resultado {
-   
     text-align: center;
     font-family: 'Orbitron', Helvetica, sans-serif;
-    font-size: 1.1em;
+    font-size: 1.5em;
     border-radius: 0.5em;
-    background-color: white;
+    background-color: #FEFEF7;
     caret-color: #ffffff00;
+    -webkit-box-shadow: inset 5px 5px 13px -4px rgba(107,107,96,1);
+    -moz-box-shadow: inset 5px 5px 13px -4px rgba(107,107,96,1);
+    box-shadow: inset 5px 5px 13px -4px rgba(107,107,96,1);
+}
+
+#resultado:focus {
+    outline: none;
 }
 
 .resultadototal{
@@ -36,20 +59,33 @@ header{
 
 .resultadoerror {
     font-family: Helvetica, sans-serif;
-    font-size: 0.7em;
-    color: red;
+    font-size: 0.9em;
+    color: #e06161;
 }
 
 .botones {
    display: grid;
    grid-template-columns: 75% 25%;
-   height: 100%;
 }
-.col1{
+.col1, .col2{
     display: grid;
-    height: 100%;
 }
 
+.row1, .row2, .row3, .row4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.botones input{
+    font-size: 1.7em;
+    font-weight: bold;
+    background: #403B4A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Dosis', sans-serif;
+
+
+}
 
 footer{
     display: flex;

@@ -30,10 +30,18 @@ function set(e) {
 
 function result() {
     try {
-        resultado = eval(leerResultado.value);
+       let resultado = eval(leerResultado.value);
+
+       if (typeof(eval(leerResultado.value)) == 'undefined') {
+
+        leerResultado.value = ""
+
+       } else {
+
         leerResultado.classList.add("resultadototal");
         leerResultado.value = resultado;
-
+       }
+            
     } catch (error) {
 
         leerResultado.classList.add("resultadoerror");
