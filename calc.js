@@ -3,48 +3,58 @@ const leerResultado = document.querySelector("#resultado");
 
 
 document.addEventListener('keydown', (event) => {
-   
-    let keyName = event.keyCode;
-   
-    switch (keyName) {
-        case 13:
-            result()
-            break;
 
-        case 46:
-            C()
-            break;
-    }
+	let keyName = event.keyCode;
+
+	switch (keyName) {
+		case 13:
+			result()
+			break;
+
+		case 46:
+			C()
+			break;
+	}
+
+
 })
 
 function C() {
 
-    leerResultado.classList.remove("resultadototal", "resultadoerror");
-    leerResultado.value = "";
+	leerResultado.classList.remove("resultadototal", "resultadoerror");
+	leerResultado.textContent = "";
 }
 
 function set(e) {
 
-    leerResultado.value += e;
+	leerResultado.textContent += e;
 }
 
+
+function pi(e) {
+
+	
+
+}
+
+
 function result() {
-    try {
-       let resultado = eval(leerResultado.value);
+	try {
+		let resultado = eval(leerResultado.textContent);
 
-       if (typeof(eval(leerResultado.value)) == 'undefined') {
+		if (typeof(eval(leerResultado.textContent)) == 'undefined') {
 
-        leerResultado.value = ""
+		leerResultado.textContent = ""
 
-       } else {
+		} else {
 
-        leerResultado.classList.add("resultadototal");
-        leerResultado.value = resultado;
-       }
-            
-    } catch (error) {
+		leerResultado.classList.add("resultadototal");
+		leerResultado.textContent = resultado;
+		}
 
-        leerResultado.classList.add("resultadoerror");
-        leerResultado.value = "mandaste cualquiera";
-    }
+	} catch (error) {
+
+		leerResultado.classList.add("resultadoerror");
+		leerResultado.textContent = "mandaste cualquiera";
+	}
 }

@@ -1,3 +1,4 @@
 calculo de porcentaje
 historial de calculos en localstorage
 presentacion de un lado || calculadora del otro
+	poner info
