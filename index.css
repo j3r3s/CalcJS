@@ -5,8 +5,7 @@
 body{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	background: rgb(163,185,126);
-	background: radial-gradient(circle, rgba(163,185,126,1) 0%, rgba(231,240,216,1) 48%);
+	background-image: linear-gradient(to right top, #858585, #8b8a96, #8f90a8, #9097ba, #8e9ecd, #80a8de, #69b3ec, #43bef8, #00cef7, #00dcea, #00e7d2, #50f0b2);
 }
 
 .main-card{
