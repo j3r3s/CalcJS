@@ -51,19 +51,17 @@ header{
 }
 
 .resultado {
+	width: 100%;
+	height: 100%;
 	text-align: center;
+	line-height: 2em;
 	font-family: 'Orbitron', Helvetica, sans-serif;
 	font-size: 1.5em;
 	border-radius: 0.5em;
-	background-color: #FEFEF7;
-	caret-color: #ffffff00;
+	background-color: #f3f3e2;
 	-webkit-box-shadow: inset 5px 5px 13px -4px rgba(107,107,96,1);
 	-moz-box-shadow: inset 5px 5px 13px -4px rgba(107,107,96,1);
 	box-shadow: inset 5px 5px 13px -4px rgba(107,107,96,1);
-}
-
-#resultado:focus {
-	outline: none;
 }
 
 .resultadototal{

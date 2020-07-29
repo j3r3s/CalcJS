@@ -4,20 +4,43 @@ const leerResultado = document.querySelector("#resultado");
 
 document.addEventListener('keydown', (event) => {
 
-	let keyName = event.keyCode;
+	let keyName = event.key;
 
 	switch (keyName) {
-		case 13:
+		case 'Enter':
 			result()
 			break;
 
-		case 46:
+		case 'Delete':
 			C()
 			break;
+
+		case '(':
+		set(keyName)
+			break;
+
+		case ')':
+		set(keyName)
+			break
+	}
+	
+	if (event.location == 3 && event.key != 'Enter') {
+
+		set(keyName)
 	}
 
-
+	let colorbuttom = document.querySelector("input[value=" + CSS.escape(keyName) + "]");
+	colorbuttom.style.color = 'red';
 })
+
+
+document.addEventListener('keyup', (event) => {
+
+	let keyup = event.key;
+	let colorbuttom = document.querySelector("input[value=" + CSS.escape(keyup) + "]");
+	colorbuttom.style.color = '';
+})
+
 
 function C() {
 
@@ -28,8 +51,8 @@ function C() {
 function set(e) {
 
 	leerResultado.textContent += e;
+	
 }
-
 
 function pi(e) {
 
@@ -58,3 +81,8 @@ function result() {
 		leerResultado.textContent = "mandaste cualquiera";
 	}
 }
+
+
+
+
+
