@@ -14,16 +14,16 @@
 </head>
 
 <body>
-	<section class="main-card">
+	<!-- <section class="main-card">
 		<h1>Jere Sánchez</h1>
 		<ul>
 			<li>Hice esto</li>
 			<li>Hice aquello</li>
 			<li>Y no hice nada</li>
 			<li>Pero tal vez <br> te interese lo siguiente:</li>
-			<li class="arrow">Hice una Calculadora -------></li>
+			<li class="arrow">Hice una Calculadora</li>
 		</ul>
-	</section>
+	</section> -->
 	<section class="main-calc">
 		<header>
 			<h2>Una Alta Calculadora</h2>
@@ -33,34 +33,42 @@
 			<div id="resultado" class="resultado"></div>
 			<div class="botones">
 				<div class="col1">
-					<input type="button" value="Delete" onclick="C()">
+					<div class="row0">
+						<input type="button" id="Delete" value="C" onclick="C()">
+						<input type="button" id="Backspace" value="←" onclick="backspace()">
+				</div>
 					<div class="row1">
-						<input type="button" value="1" onclick="set(1)">
-						<input type="button" value="2" onclick="set(2)">
-						<input type="button" value="3" onclick="set(3)">
+						<input type="button" id="1" value="1" onclick="set(1)">
+						<input type="button" id="2" value="2" onclick="set(2)">
+						<input type="button" id="3" value="3" onclick="set(3)">
 					</div>
 					<div class="row2">
-						<input type="button" value="4" onclick="set(4)">
-						<input type="button" value="5" onclick="set(5)">
-						<input type="button" value="6" onclick="set(6)">
+						<input type="button" id="4" value="4" onclick="set(4)">
+						<input type="button" id="5" value="5" onclick="set(5)">
+						<input type="button" id="6" value="6" onclick="set(6)">
 					</div>
 					<div class="row3">
-						<input type="button" value="7" onclick="set(7)">
-						<input type="button" value="8" onclick="set(8)">
-						<input type="button" value="9" onclick="set(9)">
+						<input type="button" id="7" value="7" onclick="set(7)">
+						<input type="button" id="8" value="8" onclick="set(8)">
+						<input type="button" id="9" value="9" onclick="set(9)">
 					</div>
 					<div class="row4">
-						<input type="button" value="%" onclick="percent()">
-						<input type="button" value="0" onclick="set(0)">
-						<input type="button" value="π" onclick="pi(Math.PI)">
+						<input type="button" id="%" value="%" onclick="percent()">
+						<input type="button" id="0" value="0" onclick="set(0)">
+						<input type="button" id="π" value="π" onclick="pi(Math.PI)">
+					</div>
+					<div class="row5">
+						<input type="button" id="(" value="(" onclick="set('(')">
+						<input type="button" id=")" value=")" onclick="set(')')">
+						<input type="button" id="." value="." onclick="set('.')">
 					</div>
 				</div>
 				<div class="col2">
-					<input type="button" value="+" onclick="set('+')">
-					<input type="button" value="-" onclick="set('-')">
-					<input type="button" value="*" onclick="set('*')">
-					<input type="button" value="/" onclick="set('/')">
-					<input type="button" value="Enter" onclick=" result()">
+					<input type="button" id="+" value="+" onclick="set('+')">
+					<input type="button" id="-" value="-" onclick="set('-')">
+					<input type="button" id="*" value="*" onclick="set('*')">
+					<input type="button" id="/" value="/" onclick="set('/')">
+					<input type="button" id="Enter" value="=" onclick=" result()">
 				</div>
 			</div>
 		</section>

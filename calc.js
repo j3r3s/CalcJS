@@ -5,39 +5,48 @@ const leerResultado = document.querySelector("#resultado");
 document.addEventListener('keydown', (event) => {
 
 	let keyName = event.key;
-
+	let numlock = event.getModifierState("NumLock");
+	console.log(numlock);
 	switch (keyName) {
 		case 'Enter':
+			event.preventDefault();
 			result()
 			break;
 
 		case 'Delete':
-			C()
+			C();
+			break;
+
+		case 'Backspace':
+			backspace();
 			break;
 
 		case '(':
-		set(keyName)
+		set(keyName);
 			break;
 
 		case ')':
-		set(keyName)
-			break
+		set(keyName);
+			break;
+	}
+	if (numlock) {
+
+		if (event.location == 3 && keyName != 'Enter') {
+
+			set(keyName);
+		}
+	
+		let colorbuttom = document.querySelector("input[id=" + CSS.escape(keyName) + "]");
+		colorbuttom.style.color = 'red';
 	}
 	
-	if (event.location == 3 && event.key != 'Enter') {
-
-		set(keyName)
-	}
-
-	let colorbuttom = document.querySelector("input[value=" + CSS.escape(keyName) + "]");
-	colorbuttom.style.color = 'red';
 })
 
 
 document.addEventListener('keyup', (event) => {
 
 	let keyup = event.key;
-	let colorbuttom = document.querySelector("input[value=" + CSS.escape(keyup) + "]");
+	let colorbuttom = document.querySelector("input[id=" + CSS.escape(keyup) + "]");
 	colorbuttom.style.color = '';
 })
 
@@ -48,6 +57,12 @@ function C() {
 	leerResultado.textContent = "";
 }
 
+function backspace() {
+
+	let borrarultimo = leerResultado.textContent.slice(0, -1);
+	leerResultado.textContent = borrarultimo
+} 
+
 function set(e) {
 
 	leerResultado.textContent += e;
@@ -57,6 +72,12 @@ function set(e) {
 function pi(e) {
 
 	
+
+}
+
+function percent() {
+
+
 
 }
 
@@ -81,8 +102,3 @@ function result() {
 		leerResultado.textContent = "mandaste cualquiera";
 	}
 }
-
-
-
-
-

@@ -3,7 +3,7 @@
 }
 
 body{
-	display: grid;
+	/* display: grid; */
 	grid-template-columns: 1fr 1fr;
 	background-image: linear-gradient(to right top, #858585, #8b8a96, #8f90a8, #9097ba, #8e9ecd, #80a8de, #69b3ec, #43bef8, #00cef7, #00dcea, #00e7d2, #50f0b2);
 }
@@ -83,19 +83,32 @@ header{
 .col1, .col2{
 	display: grid;
 }
+.col2{
+	grid-template-rows: repeat(6, 1fr);
+}
 
-.row1, .row2, .row3, .row4{
+.row1, .row2, .row3, .row4, .row5{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.botones input{
+.row0{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+input{
 	font-size: 1.7em;
 	font-weight: bold;
 	background: #403B4A;
 	background: -webkit-linear-gradient(to bottom, #E7E9BB, #403B4A); 
 	background: linear-gradient(to bottom, #E7E9BB, #403B4A);
 	font-family: 'Dosis', sans-serif;
+	outline: none;
+}
+
+input:active {
+	color: red;
 }
 
 footer{
