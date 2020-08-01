@@ -67,14 +67,8 @@ function backspace() {
 function set(e) {
 
 	leerResultado.textContent += e;
-	
 }
-//PI function
-function pi(e) {
 
-	
-
-}
 //percet function
 function percent() {
 
