@@ -6,7 +6,6 @@ document.addEventListener('keydown', (event) => {
 
 	let keyName = event.key;
 	let numlock = event.getModifierState("NumLock");
-	console.log(numlock);
 	switch (keyName) {
 		case 'Enter':
 			event.preventDefault();
@@ -66,7 +65,10 @@ function backspace() {
 //write values by click
 function set(e) {
 
-	leerResultado.textContent += e;
+	if (leerResultado.textContent.length <= 10) {
+
+		leerResultado.textContent += e;
+	}
 }
 
 //percet function
